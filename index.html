@@ -1,11 +1,9 @@
 <!DOCTYPE html>
-
 <html lang="ka">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
 <meta name="theme-color" content="#070509">
-
 <title>ერთი პატარა პაემანი ❤️</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,7 +11,6 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-
 :root{
     --bg:#070509;
     --bg2:#12070d;
@@ -24,12 +21,9 @@
     --white:#fff8fb;
     --text:#ded1d6;
     --muted:#a99ca2;
-
     --glass:rgba(255,255,255,.055);
     --glass2:rgba(255,255,255,.085);
-
     --border:rgba(255,255,255,.11);
-
     --shadow:
         0 35px 100px rgba(0,0,0,.55);
 }
@@ -46,7 +40,6 @@ html{
 
 body{
     min-height:100vh;
-
     background:
         radial-gradient(
             circle at 50% -10%,
@@ -59,11 +52,8 @@ body{
             transparent 30%
         ),
         var(--bg);
-
     color:var(--white);
-
     font-family:"DM Sans",sans-serif;
-
     overflow-x:hidden;
 }
 
@@ -74,24 +64,17 @@ button{
 .noise{
     position:fixed;
     inset:0;
-
     z-index:99999;
-
     pointer-events:none;
-
     opacity:.035;
-
     background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
 .vignette{
     position:fixed;
     inset:0;
-
     z-index:9998;
-
     pointer-events:none;
-
     background:
         radial-gradient(
             circle,
@@ -102,16 +85,11 @@ button{
 
 .top-progress{
     position:fixed;
-
     top:0;
     left:0;
-
     height:3px;
-
     width:0;
-
     z-index:10000;
-
     background:
         linear-gradient(
             90deg,
@@ -119,10 +97,8 @@ button{
             #ff8eaa,
             #e7bd79
         );
-
     box-shadow:
         0 0 15px rgba(255,100,140,.5);
-
     transition:
         width .8s cubic-bezier(.16,1,.3,1);
 }
@@ -130,23 +106,17 @@ button{
 .scene{
     min-height:100svh;
     width:100%;
-
     display:none;
-
     position:relative;
-
     align-items:center;
     justify-content:center;
-
     padding:
         50px 18px;
-
     overflow:hidden;
 }
 
 .scene.active{
     display:flex;
-
     animation:
         sceneIn
         .9s
@@ -154,13 +124,11 @@ button{
 }
 
 @keyframes sceneIn{
-
     from{
         opacity:0;
         transform:scale(1.035);
         filter:blur(14px);
     }
-
     to{
         opacity:1;
         transform:scale(1);
@@ -170,60 +138,45 @@ button{
 
 .content{
     width:min(100%,900px);
-
     text-align:center;
-
     position:relative;
-
     z-index:10;
 }
 
 .eyebrow{
     margin-bottom:20px;
-
     color:var(--gold);
-
     text-transform:uppercase;
-
     letter-spacing:4px;
-
     font-size:10px;
 }
 
 h1,
 h2{
     font-family:"Playfair Display",serif;
-
     font-weight:500;
-
     letter-spacing:-2px;
 }
 
 h1{
     font-size:
         clamp(55px,11vw,110px);
-
     line-height:.95;
 }
 
 h2{
     font-size:
         clamp(38px,7vw,75px);
-
     line-height:1;
 }
 
 .subtitle{
     max-width:650px;
-
     margin:
         25px auto;
-
     color:var(--muted);
-
     font-size:
         clamp(15px,2.5vw,19px);
-
     line-height:1.85;
 }
 
@@ -235,19 +188,14 @@ h2{
             #ff91ae,
             #fff
         );
-
     background-size:200%;
-
     -webkit-background-clip:text;
-
     color:transparent;
-
     animation:
         shine 4s linear infinite;
 }
 
 @keyframes shine{
-
     to{
         background-position:200%;
     }
@@ -255,58 +203,40 @@ h2{
 
 .buttons{
     display:flex;
-
     justify-content:center;
-
     flex-wrap:wrap;
-
     gap:12px;
-
     margin-top:30px;
 }
 
 .btn{
     position:relative;
-
     border:
         1px solid
         rgba(255,255,255,.16);
-
     background:
         rgba(255,255,255,.055);
-
     color:white;
-
     border-radius:999px;
-
     padding:
         15px 25px;
-
     cursor:pointer;
-
     backdrop-filter:blur(18px);
-
     transition:
         transform .35s cubic-bezier(.16,1,.3,1),
         border-color .35s,
         box-shadow .35s,
         background .35s;
-
     overflow:hidden;
 }
 
 .btn::before{
     content:"";
-
     position:absolute;
-
     top:0;
     bottom:0;
-
     width:50%;
-
     left:-70%;
-
     background:
         linear-gradient(
             90deg,
@@ -314,9 +244,7 @@ h2{
             rgba(255,255,255,.22),
             transparent
         );
-
     transform:skewX(-20deg);
-
     transition:
         left .8s;
 }
@@ -329,10 +257,8 @@ h2{
     transform:
         translateY(-4px)
         scale(1.025);
-
     border-color:
         rgba(255,126,156,.55);
-
     box-shadow:
         0 18px 50px
         rgba(217,70,104,.2);
@@ -349,7 +275,6 @@ h2{
             #d94668,
             #8d2948
         );
-
     box-shadow:
         0 15px 45px
         rgba(217,70,104,.2);
@@ -357,24 +282,17 @@ h2{
 
 .stars{
     position:absolute;
-
     inset:0;
-
     pointer-events:none;
 }
 
 .star{
     position:absolute;
-
     width:2px;
     height:2px;
-
     border-radius:50%;
-
     background:white;
-
     opacity:.5;
-
     animation:
         twinkle
         3s
@@ -383,12 +301,10 @@ h2{
 }
 
 @keyframes twinkle{
-
     0%,100%{
         opacity:.1;
         transform:scale(.7);
     }
-
     50%{
         opacity:1;
         transform:scale(1.5);
@@ -397,21 +313,16 @@ h2{
 
 .intro-orb{
     position:absolute;
-
     width:480px;
     height:480px;
-
     border-radius:50%;
-
     background:
         radial-gradient(
             circle,
             rgba(217,70,104,.24),
             transparent 67%
         );
-
     filter:blur(10px);
-
     animation:
         orbFloat
         8s
@@ -420,57 +331,43 @@ h2{
 }
 
 @keyframes orbFloat{
-
     50%{
         transform:
             scale(1.25)
             translateY(-20px);
-
         opacity:.65;
     }
 }
 
 .letter-intro{
     width:min(100%,650px);
-
     margin:auto;
-
     padding:
         40px 30px;
-
     border:
         1px solid
         var(--border);
-
     border-radius:28px;
-
     background:
         linear-gradient(
             145deg,
             rgba(255,255,255,.08),
             rgba(255,255,255,.025)
         );
-
     backdrop-filter:blur(25px);
-
     box-shadow:
         var(--shadow);
 }
 
 .letter-line{
     opacity:0;
-
     transform:translateY(15px);
-
     animation:
         letterAppear
         .8s
         forwards;
-
     margin:12px 0;
-
     color:#e9dfe3;
-
     line-height:1.8;
 }
 
@@ -491,207 +388,21 @@ h2{
 }
 
 @keyframes letterAppear{
-
     to{
         opacity:1;
         transform:none;
     }
 }
 
-.city{
-    position:absolute;
-
-    left:0;
-    right:0;
-    bottom:0;
-
-    height:40%;
-
-    background:
-        linear-gradient(
-            to top,
-            rgba(0,0,0,.95),
-            transparent
-        ),
-
-        repeating-linear-gradient(
-            90deg,
-            #100a10 0 55px,
-            #170c14 55px 100px,
-            #0b090d 100px 145px
-        );
-
-    clip-path:
-        polygon(
-            0 42%,
-            5% 28%,
-            9% 43%,
-            14% 22%,
-            19% 38%,
-            25% 15%,
-            30% 34%,
-            36% 10%,
-            42% 36%,
-            48% 18%,
-            54% 40%,
-            61% 12%,
-            67% 31%,
-            74% 18%,
-            81% 37%,
-            88% 13%,
-            95% 32%,
-            100% 18%,
-            100% 100%,
-            0 100%
-        );
-}
-
-.streetlight{
-    position:absolute;
-
-    bottom:30%;
-
-    width:3px;
-    height:150px;
-
-    background:#4c454a;
-}
-
-.streetlight::after{
-    content:"";
-
-    position:absolute;
-
-    width:110px;
-    height:110px;
-
-    left:-53px;
-    top:-20px;
-
-    background:
-        radial-gradient(
-            circle,
-            rgba(255,210,130,.25),
-            transparent 65%
-        );
-}
-
-.car{
-    position:absolute;
-
-    bottom:18%;
-
-    left:-230px;
-
-    width:180px;
-    height:65px;
-
-    border-radius:
-        60px 70px
-        20px 20px;
-
-    background:
-        linear-gradient(
-            #292929,
-            #070707
-        );
-
-    box-shadow:
-        0 0 80px
-        rgba(255,220,160,.3);
-
-    animation:
-        drive
-        5s
-        linear
-        forwards;
-}
-
-.car::before{
-    content:"";
-
-    position:absolute;
-
-    left:48px;
-    top:-32px;
-
-    width:80px;
-    height:42px;
-
-    border-radius:
-        45px 45px 0 0;
-
-    background:#111;
-
-    border:
-        1px solid #333;
-}
-
-.car::after{
-    content:"";
-
-    position:absolute;
-
-    right:-70px;
-    top:23px;
-
-    width:90px;
-    height:9px;
-
-    background:
-        linear-gradient(
-            90deg,
-            rgba(255,240,180,.05),
-            rgba(255,240,180,.9)
-        );
-
-    filter:blur(5px);
-}
-
-.wheel{
-    position:absolute;
-
-    width:30px;
-    height:30px;
-
-    bottom:-13px;
-
-    border-radius:50%;
-
-    background:#020202;
-
-    border:
-        5px solid #333;
-}
-
-.w1{
-    left:25px;
-}
-
-.w2{
-    right:25px;
-}
-
-@keyframes drive{
-
-    to{
-        left:
-            calc(100% + 250px);
-    }
-}
-
 .restaurant-bg{
     position:absolute;
-
     inset:0;
-
     background:
         radial-gradient(
             circle at 50% 42%,
             rgba(205,105,53,.18),
             transparent 28%
         ),
-
         linear-gradient(
             180deg,
             #080609,
@@ -701,11 +412,8 @@ h2{
 
 .restaurant-bg::after{
     content:"";
-
     position:absolute;
-
     inset:0;
-
     background:
         repeating-linear-gradient(
             90deg,
@@ -716,102 +424,72 @@ h2{
 
 .table{
     position:relative;
-
     width:min(100%,700px);
-
     min-height:185px;
-
     margin:
         35px auto;
-
     border:
         1px solid
         rgba(255,255,255,.1);
-
     border-radius:35px;
-
     background:
         linear-gradient(
             145deg,
             rgba(255,255,255,.08),
             rgba(255,255,255,.025)
         );
-
     backdrop-filter:blur(18px);
-
     box-shadow:
         var(--shadow);
-
     display:flex;
-
     align-items:center;
-
     justify-content:center;
-
     gap:70px;
 }
 
 .chair{
     width:110px;
     height:110px;
-
     border:
         1px solid
         rgba(255,255,255,.1);
-
     border-radius:50%;
-
     display:grid;
-
     place-items:center;
-
     color:#c8b8be;
-
     font-size:12px;
 }
 
 .candle{
     position:absolute;
-
     top:22px;
     left:50%;
-
     transform:
         translateX(-50%);
-
     width:8px;
     height:26px;
-
     background:#f0dfc5;
-
     border-radius:3px;
 }
 
 .flame{
     position:absolute;
-
     width:15px;
     height:25px;
-
     left:-4px;
     top:-18px;
-
     border-radius:
         50% 50%
         50% 10%;
-
     background:
         linear-gradient(
             #fff,
             #ff8b42
         );
-
     transform:rotate(45deg);
-
     box-shadow:
         0 0 30px
         #ff9d58;
-
     animation:
         flame .8s
         infinite
@@ -819,7 +497,6 @@ h2{
 }
 
 @keyframes flame{
-
     to{
         transform:
             rotate(40deg)
@@ -829,44 +506,29 @@ h2{
 
 .menu-grid{
     display:grid;
-
     grid-template-columns:
         repeat(3,1fr);
-
     gap:15px;
-
     margin-top:30px;
 }
 
 .menu-card{
     min-height:150px;
-
     padding:
         20px 15px;
-
     border:
         1px solid
         var(--border);
-
     border-radius:25px;
-
     background:
         var(--glass);
-
     backdrop-filter:blur(15px);
-
     cursor:pointer;
-
     display:flex;
-
     flex-direction:column;
-
     align-items:center;
-
     justify-content:center;
-
     gap:9px;
-
     transition:
         transform .4s
         cubic-bezier(.16,1,.3,1),
@@ -878,10 +540,8 @@ h2{
 .menu-card:hover{
     transform:
         translateY(-7px);
-
     background:
         rgba(255,255,255,.09);
-
     border-color:
         rgba(255,123,157,.55);
 }
@@ -890,13 +550,10 @@ h2{
     transform:
         translateY(-5px)
         scale(1.02);
-
     border-color:
         var(--pink);
-
     background:
         rgba(217,70,104,.13);
-
     box-shadow:
         0 20px 55px
         rgba(217,70,104,.2);
@@ -916,33 +573,24 @@ h2{
 
 .meter-wrap{
     width:min(100%,520px);
-
     margin:
         35px auto;
 }
 
 .meter-label{
     display:flex;
-
     justify-content:space-between;
-
     margin-bottom:10px;
-
     color:var(--muted);
-
     font-size:13px;
 }
 
 .meter{
     height:13px;
-
     overflow:hidden;
-
     border-radius:99px;
-
     background:
         rgba(255,255,255,.08);
-
     border:
         1px solid
         rgba(255,255,255,.08);
@@ -950,9 +598,7 @@ h2{
 
 .meter-fill{
     width:100%;
-
     height:100%;
-
     background:
         linear-gradient(
             90deg,
@@ -960,7 +606,6 @@ h2{
             #ff6d8e,
             #c72950
         );
-
     transition:
         width 1.3s
         cubic-bezier(.16,1,.3,1);
@@ -968,60 +613,43 @@ h2{
 
 .quiz-card{
     width:min(100%,620px);
-
     margin:auto;
-
     padding:30px;
-
     border:
         1px solid
         var(--border);
-
     border-radius:30px;
-
     background:
         var(--glass);
-
     backdrop-filter:blur(20px);
-
     box-shadow:
         var(--shadow);
 }
 
 .answers{
     display:grid;
-
     gap:12px;
-
     margin-top:25px;
 }
 
 .answer{
     padding:17px;
-
     border:
         1px solid
         var(--border);
-
     border-radius:17px;
-
     background:
         rgba(255,255,255,.04);
-
     color:white;
-
     cursor:pointer;
-
     transition:.3s;
 }
 
 .answer:hover{
     transform:
         translateY(-2px);
-
     border-color:
         var(--pink);
-
     background:
         rgba(217,70,104,.1);
 }
@@ -1029,7 +657,6 @@ h2{
 .answer.selected{
     border-color:
         var(--pink);
-
     background:
         rgba(217,70,104,.13);
 }
@@ -1037,19 +664,14 @@ h2{
 .envelope{
     width:320px;
     height:210px;
-
     position:relative;
-
     margin:
         55px auto 35px;
-
     cursor:pointer;
-
     transition:
         transform .45s
         cubic-bezier(.16,1,.3,1),
         filter .45s;
-    
     filter:
         drop-shadow(
             0 30px 50px
@@ -1061,7 +683,6 @@ h2{
     transform:
         translateY(-8px)
         scale(1.025);
-
     filter:
         drop-shadow(
             0 35px 60px
@@ -1076,13 +697,9 @@ h2{
 
 .env-body{
     position:absolute;
-
     inset:0;
-
     overflow:hidden;
-
     border-radius:18px;
-
     background:
         linear-gradient(
             145deg,
@@ -1090,15 +707,12 @@ h2{
             #8e2847 48%,
             #641a32 100%
         );
-
     border:
         1px solid
         rgba(255,255,255,.18);
-
     box-shadow:
         inset 0 1px 0
         rgba(255,255,255,.18),
-
         0 25px 70px
         rgba(0,0,0,.35);
 }
@@ -1106,12 +720,9 @@ h2{
 .env-body::before,
 .env-body::after{
     content:"";
-
     position:absolute;
-
     width:110%;
     height:1px;
-
     background:
         rgba(255,255,255,.13);
 }
@@ -1119,7 +730,6 @@ h2{
 .env-body::before{
     left:-5%;
     top:48%;
-
     transform:
         rotate(32deg);
 }
@@ -1127,39 +737,31 @@ h2{
 .env-body::after{
     right:-5%;
     top:48%;
-
     transform:
         rotate(-32deg);
 }
 
 .env-flap{
     position:absolute;
-
     z-index:3;
-
     top:0;
     left:0;
-
     width:100%;
     height:115px;
-
     background:
         linear-gradient(
             145deg,
             #d65b78,
             #a43150
         );
-
     clip-path:
         polygon(
             0 0,
             100% 0,
             50% 100%
         );
-
     border-radius:
         18px 18px 0 0;
-
     box-shadow:
         0 8px 20px
         rgba(0,0,0,.15);
@@ -1167,24 +769,16 @@ h2{
 
 .env-seal{
     position:absolute;
-
     z-index:5;
-
     left:50%;
     top:91px;
-
     width:52px;
     height:52px;
-
     transform:
         translateX(-50%);
-
     display:grid;
-
     place-items:center;
-
     border-radius:50%;
-
     background:
         radial-gradient(
             circle at 35% 30%,
@@ -1192,20 +786,15 @@ h2{
             #df5275 45%,
             #922742 100%
         );
-
     border:
         2px solid
         rgba(255,255,255,.3);
-
     box-shadow:
         0 8px 30px
         rgba(255,80,120,.3),
-
         inset 0 2px 5px
         rgba(255,255,255,.3);
-
     font-size:22px;
-
     transition:.4s;
 }
 
@@ -1213,7 +802,6 @@ h2{
     transform:
         translateX(-50%)
         scale(1.1);
-
     box-shadow:
         0 10px 40px
         rgba(255,80,120,.5);
@@ -1222,43 +810,28 @@ h2{
 .envelope::after{
     content:
         "დააჭირე ❤️";
-
     position:absolute;
-
     left:50%;
     bottom:-38px;
-
     transform:
         translateX(-50%);
-
     white-space:nowrap;
-
     color:
         rgba(255,255,255,.55);
-
     font-size:12px;
-
     letter-spacing:1px;
 }
 
 .letter-modal{
     position:fixed;
-
     inset:0;
-
     z-index:20000;
-
     display:flex;
-
     align-items:center;
     justify-content:center;
-
     padding:20px;
-
     opacity:0;
-
     visibility:hidden;
-
     transition:
         opacity .45s,
         visibility .45s;
@@ -1266,68 +839,51 @@ h2{
 
 .letter-modal.show{
     opacity:1;
-
     visibility:visible;
 }
 
 .letter-backdrop{
     position:absolute;
-
     inset:0;
-
     background:
         radial-gradient(
             circle at center,
             rgba(160,40,70,.2),
             rgba(0,0,0,.84)
         );
-
     backdrop-filter:
         blur(13px);
 }
 
 .letter-window{
     position:relative;
-
     z-index:2;
-
     width:min(100%,560px);
-
     padding:
         42px 32px 35px;
-
     border-radius:30px;
-
     text-align:center;
-
     background:
         linear-gradient(
             145deg,
             rgba(43,19,30,.98),
             rgba(13,7,12,.98)
         );
-
     border:
         1px solid
         rgba(255,255,255,.14);
-
     box-shadow:
         0 50px 120px
         rgba(0,0,0,.65),
-
         0 0 80px
         rgba(217,70,104,.12);
-
     transform:
         translateY(35px)
         scale(.94);
-
     opacity:0;
-
     transition:
         transform .65s
         cubic-bezier(.16,1,.3,1),
-
         opacity .5s;
 }
 
@@ -1335,34 +891,24 @@ h2{
     transform:
         translateY(0)
         scale(1);
-
     opacity:1;
 }
 
 .letter-close{
     position:absolute;
-
     right:17px;
     top:15px;
-
     width:39px;
     height:39px;
-
     border-radius:50%;
-
     border:
         1px solid
         rgba(255,255,255,.1);
-
     background:
         rgba(255,255,255,.05);
-
     color:white;
-
     font-size:25px;
-
     cursor:pointer;
-
     transition:.3s;
 }
 
@@ -1370,7 +916,6 @@ h2{
     transform:
         rotate(90deg)
         scale(1.05);
-
     background:
         rgba(255,255,255,.12);
 }
@@ -1378,29 +923,21 @@ h2{
 .letter-icon{
     width:72px;
     height:72px;
-
     margin:
         0 auto 20px;
-
     display:grid;
-
     place-items:center;
-
     border-radius:50%;
-
     background:
         radial-gradient(
             circle,
             rgba(255,120,150,.23),
             rgba(255,120,150,.04)
         );
-
     border:
         1px solid
         rgba(255,120,150,.2);
-
     font-size:34px;
-
     animation:
         letterPulse
         2.5s
@@ -1409,14 +946,11 @@ h2{
 }
 
 @keyframes letterPulse{
-
     0%,100%{
         transform:scale(1);
     }
-
     50%{
         transform:scale(1.07);
-
         box-shadow:
             0 0 35px
             rgba(255,100,140,.17);
@@ -1426,16 +960,12 @@ h2{
 .letter-eyebrow{
     color:
         var(--gold);
-
     text-transform:
         uppercase;
-
     letter-spacing:
         3px;
-
     font-size:
         10px;
-
     margin-bottom:
         14px;
 }
@@ -1443,25 +973,19 @@ h2{
 .letter-window h2{
     font-family:
         "Playfair Display",serif;
-
     font-size:
         clamp(28px,6vw,43px);
-
     font-weight:
         500;
-
     line-height:
         1.15;
 }
 
 .letter-divider{
     display:flex;
-
     align-items:center;
     justify-content:center;
-
     gap:12px;
-
     margin:
         24px 0;
 }
@@ -1469,10 +993,8 @@ h2{
 .letter-divider::before,
 .letter-divider::after{
     content:"";
-
     width:65px;
     height:1px;
-
     background:
         linear-gradient(
             90deg,
@@ -1489,7 +1011,6 @@ h2{
 .letter-divider span{
     color:
         #ff8fa9;
-
     font-size:
         18px;
 }
@@ -1497,13 +1018,10 @@ h2{
 .letter-text{
     color:
         #cdbfc5;
-
     font-family:
         "Playfair Display",serif;
-
     font-size:
         clamp(15px,3vw,18px);
-
     line-height:
         1.8;
 }
@@ -1516,13 +1034,10 @@ h2{
 .letter-special{
     margin-top:
         20px!important;
-
     color:
         #fff1f4;
-
     font-size:
         clamp(18px,3.5vw,23px);
-
     line-height:
         1.6;
 }
@@ -1532,86 +1047,12 @@ h2{
         27px;
 }
 
-.memory-wall{
-    display:grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
-
-    gap:18px;
-
-    margin-top:30px;
-}
-
-.memory{
-    min-height:215px;
-
-    padding:
-        10px 10px 35px;
-
-    border-radius:8px;
-
-    background:
-        #eee5dc;
-
-    color:#36282c;
-
-    transform:
-        rotate(var(--r));
-
-    transition:.5s;
-
-    box-shadow:
-        0 20px 50px
-        rgba(0,0,0,.35);
-}
-
-.memory:hover{
-    transform:
-        rotate(0)
-        scale(1.05);
-
-    z-index:3;
-}
-
-.memory-photo{
-    height:170px;
-
-    border-radius:4px;
-
-    display:grid;
-
-    place-items:center;
-
-    font-size:40px;
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(217,70,104,.35),
-            rgba(30,20,30,.9)
-        );
-}
-
-.memory p{
-    font-family:
-        "Playfair Display",serif;
-
-    text-align:center;
-
-    margin-top:8px;
-
-    font-size:12px;
-}
-
 .final-heart{
     font-size:100px;
-
     animation:
         heartbeat
         1.5s
         infinite;
-
     filter:
         drop-shadow(
             0 0 30px
@@ -1620,19 +1061,15 @@ h2{
 }
 
 @keyframes heartbeat{
-
     0%,100%{
         transform:scale(1);
     }
-
     15%{
         transform:scale(1.12);
     }
-
     30%{
         transform:scale(1);
     }
-
     45%{
         transform:scale(1.08);
     }
@@ -1640,13 +1077,9 @@ h2{
 
 .confetti{
     position:fixed;
-
     top:-30px;
-
     z-index:30000;
-
     pointer-events:none;
-
     animation:
         confettiFall
         3.5s
@@ -1655,56 +1088,40 @@ h2{
 }
 
 @keyframes confettiFall{
-
     to{
         transform:
             translateY(110vh)
             rotate(720deg);
-
         opacity:0;
     }
 }
 
 .toast{
     position:fixed;
-
     left:50%;
     bottom:30px;
-
     z-index:40000;
-
     transform:
         translate(-50%,30px);
-
     padding:
         13px 20px;
-
     border:
         1px solid
         rgba(255,255,255,.12);
-
     border-radius:999px;
-
     background:
         rgba(20,10,15,.85);
-
     backdrop-filter:
         blur(20px);
-
     color:white;
-
     opacity:0;
-
     pointer-events:none;
-
     transition:.4s;
-
     white-space:nowrap;
 }
 
 .toast.show{
     opacity:1;
-
     transform:
         translate(-50%,0);
 }
@@ -1740,19 +1157,6 @@ h2{
     .chair{
         width:90px;
         height:90px;
-    }
-
-    .memory-wall{
-        grid-template-columns:
-            1fr 1fr;
-    }
-
-    .memory{
-        min-height:165px;
-    }
-
-    .memory-photo{
-        height:125px;
     }
 
     .envelope{
@@ -1795,32 +1199,24 @@ h2{
     *,
     *::before,
     *::after{
-
         animation-duration:
             .01ms!important;
-
         animation-iteration-count:
             1!important;
-
         transition-duration:
             .01ms!important;
-
         scroll-behavior:
             auto!important;
     }
 }
-
 </style>
-
 </head>
 
 <body>
 
 <div id="app">
 
-```
 <div class="noise"></div>
-
 <div class="vignette"></div>
 
 <div
@@ -1860,9 +1256,7 @@ h2{
             <button
                 class="btn primary"
                 onclick="next(2)">
-
                 მომისმენ? 🥺
-
             </button>
 
         </div>
@@ -1908,64 +1302,11 @@ h2{
 
             <button
                 class="btn primary"
-                onclick="next(3)">
-
+                onclick="next(4)">
                 რა მოიფიქრე? 👀
-
             </button>
 
         </div>
-
-    </div>
-
-</section>
-
-<section
-    class="scene"
-    id="s3">
-
-    <div class="city"></div>
-
-    <div
-        class="streetlight"
-        style="left:18%">
-    </div>
-
-    <div
-        class="streetlight"
-        style="left:72%">
-    </div>
-
-    <div class="car">
-
-        <div class="wheel w1"></div>
-        <div class="wheel w2"></div>
-
-    </div>
-
-    <div class="content">
-
-        <h2>
-            მანქანა მზად არის.
-        </h2>
-
-        <p class="subtitle">
-
-            რესტორანი — დაჯავშნილია.
-            <br>
-
-            შენი ადგილი —
-            <strong>ჩემ გვერდით.</strong>
-
-        </p>
-
-        <button
-            class="btn primary"
-            onclick="next(4)">
-
-            წავედით 🚗❤️
-
-        </button>
 
     </div>
 
@@ -1996,25 +1337,19 @@ h2{
             <button
                 class="btn"
                 onclick="musicChoice('ჩვენი სიმღერა')">
-
                 🎵 ჩვენი სიმღერა
-
             </button>
 
             <button
                 class="btn"
                 onclick="musicChoice('მშვიდობა')">
-
                 🌙 Mood: მშვიდობა
-
             </button>
 
             <button
                 class="btn"
                 onclick="musicChoice('გაბრაზებული')">
-
                 😒 ჯერ კიდევ გაბრაზებული ვარ
-
             </button>
 
         </div>
@@ -2024,9 +1359,7 @@ h2{
             <button
                 class="btn primary"
                 onclick="next(5)">
-
                 მივედით 🚗
-
             </button>
 
         </div>
@@ -2070,23 +1403,17 @@ h2{
         </div>
 
         <p class="subtitle">
-
             მაგრამ დღეს ერთი წესია...
-
             <br>
-
             <strong>
                 შენ ირჩევ ყველაფერს.
             </strong>
-
         </p>
 
         <button
             class="btn primary"
             onclick="next(6)">
-
             დავიწყოთ 🍽️
-
         </button>
 
     </div>
@@ -2224,9 +1551,7 @@ h2{
             <button
                 class="btn primary"
                 onclick="goNextAfterChoice(7)">
-
                 ეს ავირჩიეთ ❤️
-
             </button>
 
         </div>
@@ -2348,9 +1673,7 @@ h2{
             <button
                 class="btn primary"
                 onclick="goNextAfterChoice(8)">
-
                 ჩავიწერეთ 🥤
-
             </button>
 
         </div>
@@ -2456,9 +1779,7 @@ h2{
             <button
                 class="btn primary"
                 onclick="goNextAfterChoice(9)">
-
                 ესეც ❤️
-
             </button>
 
         </div>
@@ -2507,22 +1828,16 @@ h2{
         </div>
 
         <p class="subtitle">
-
             კარგი...
-
             <br>
-
             მგონი ცოტათი
             უკეთესობისკენ მივდივართ. 😌
-
         </p>
 
         <button
             class="btn primary"
             onclick="next(10)">
-
             შემდეგი ეტაპი 👀
-
         </button>
 
     </div>
@@ -2548,15 +1863,12 @@ h2{
             <p
                 id="question"
                 style="font-size:20px">
-
                 რომელი უფრო მოგეწონებოდა?
-
             </p>
 
             <div
                 class="answers"
                 id="answers">
-
             </div>
 
         </div>
@@ -2566,9 +1878,7 @@ h2{
             <button
                 class="btn primary"
                 onclick="nextQuiz()">
-
                 შემდეგი კითხვა →
-
             </button>
 
         </div>
@@ -2600,25 +1910,19 @@ h2{
             <button
                 class="btn"
                 onclick="angryAnswer()">
-
                 კი 😒
-
             </button>
 
             <button
                 class="btn"
                 onclick="softAnswer()">
-
                 ცოტათი ❤️
-
             </button>
 
             <button
                 class="btn primary"
                 onclick="happyAnswer()">
-
                 არა 🥹
-
             </button>
 
         </div>
@@ -2657,21 +1961,15 @@ h2{
         </div>
 
         <p class="subtitle">
-
             და კი...
-
             <br>
-
             ეს ნაწილი მართლა გულწრფელია.
-
         </p>
 
         <button
             class="btn primary"
             onclick="next(14)">
-
             გავაგრძელოთ ❤️
-
         </button>
 
     </div>
@@ -2695,15 +1993,11 @@ h2{
         </h2>
 
         <p class="subtitle">
-
             საჭმელი — ✔
             <br>
-
             დესერტი — ✔
             <br>
-
             შერიგება — ...
-
         </p>
 
         <div
@@ -2712,9 +2006,7 @@ h2{
                 margin:30px 0;
                 animation:heartbeat 2s infinite;
             ">
-
             🌙
-
         </div>
 
         <p class="subtitle">
@@ -2724,9 +2016,7 @@ h2{
         <button
             class="btn primary"
             onclick="next(15)">
-
             მითხარი ❤️
-
         </button>
 
     </div>
@@ -2752,25 +2042,19 @@ h2{
             <button
                 class="btn"
                 onclick="angryFinal()">
-
                 კი 😒
-
             </button>
 
             <button
                 class="btn"
                 onclick="softFinal()">
-
                 ცოტათი ❤️
-
             </button>
 
             <button
                 class="btn primary"
                 onclick="happyFinal()">
-
                 არა 🥹
-
             </button>
 
         </div>
@@ -2798,15 +2082,11 @@ h2{
         </h1>
 
         <p class="subtitle">
-
             ერთი საღამო.
             <br>
-
             ორი ადამიანი.
             <br>
-
             და ერთი პატარა მცდელობა...
-
         </p>
 
         <h2>
@@ -2818,10 +2098,8 @@ h2{
             <button
                 class="btn primary"
                 onclick="celebrate()">
-
                 ახლა კი წავიდეთ
                 პაემანზე ❤️
-
             </button>
 
         </div>
@@ -2829,7 +2107,6 @@ h2{
     </div>
 
 </section>
-```
 
 </div>
 
@@ -2837,72 +2114,64 @@ h2{
     class="letter-modal"
     id="letterModal">
 
-```
-<div
-    class="letter-backdrop"
-    onclick="closeLetter()">
-</div>
-
-<div class="letter-window">
-
-    <button
-        class="letter-close"
-        onclick="closeLetter()"
-        aria-label="დახურვა">
-
-        ×
-
-    </button>
-
-    <div class="letter-icon">
-        💌
-    </div>
-
-    <div class="letter-eyebrow">
-        პატარა წერილი შენთვის
-    </div>
-
-    <h2>
-        ერთი რამ უნდა იცოდე...
-    </h2>
-
-    <div class="letter-divider">
-        <span>♡</span>
-    </div>
-
-    <div class="letter-text">
-
-        <p>
-            შეიძლება ყოველთვის სწორად ვერ ვიქცევი.
-        </p>
-
-        <p>
-            შეიძლება ხანდახან გაგაბრაზო.
-        </p>
-
-        <p>
-            მაგრამ ერთი რამ ზუსტად ვიცი...
-        </p>
-
-        <p class="letter-special">
-
-            შენი გაღიმება ჩემთვის
-            ძალიან მნიშვნელოვანია. ❤️
-
-        </p>
-
-    </div>
-
-    <button
-        class="btn primary letter-button"
+    <div
+        class="letter-backdrop"
         onclick="closeLetter()">
+    </div>
 
-        გავაგრძელოთ ❤️
+    <div class="letter-window">
 
-    </button>
+        <button
+            class="letter-close"
+            onclick="closeLetter()"
+            aria-label="დახურვა">
+            ×
+        </button>
 
-</div>
-```
+        <div class="letter-icon">
+            💌
+        </div>
+
+        <div class="letter-eyebrow">
+            პატარა წერილი შენთვის
+        </div>
+
+        <h2>
+            ერთი რამ უნდა იცოდე...
+        </h2>
+
+        <div class="letter-divider">
+            <span>♡</span>
+        </div>
+
+        <div class="letter-text">
+
+            <p>
+                შეიძლება ყოველთვის სწორად ვერ ვიქცევი.
+            </p>
+
+            <p>
+                შეიძლება ხანდახან გაგაბრაზო.
+            </p>
+
+            <p>
+                მაგრამ ერთი რამ ზუსტად ვიცი...
+            </p>
+
+            <p class="letter-special">
+                შენი გაღიმება ჩემთვის
+                ძალიან მნიშვნელოვანია. ❤️
+            </p>
+
+        </div>
+
+        <button
+            class="btn primary letter-button"
+            onclick="closeLetter()">
+            გავაგრძელოთ ❤️
+        </button>
+
+    </div>
 
 </div>
 
@@ -2940,7 +2209,9 @@ function next(number){
     document
         .querySelectorAll(".scene")
         .forEach(scene=>{
+
             scene.classList.remove("active");
+
         });
 
     const target =
@@ -2973,15 +2244,11 @@ function next(number){
     });
 
     if(number===9){
-
         updateAnger();
-
     }
 
     if(number===10){
-
         renderQuiz();
-
     }
 
 }
@@ -3072,17 +2339,23 @@ function musicChoice(choice){
 function sendChoice(choice){
 
     fetch("https://formspree.io/f/xeaqezdw",{
+
         method:"POST",
+
         headers:{
             "Accept":"application/json",
             "Content-Type":"application/json"
         },
+
         body:JSON.stringify({
+
             choice:choice,
             food:state.food,
             drink:state.drink,
             dessert:state.dessert
+
         })
+
     }).catch(()=>{});
 
 }
@@ -3097,9 +2370,11 @@ function selectItem(
         .parentElement
         .querySelectorAll(".menu-card")
         .forEach(card=>{
+
             card.classList.remove(
                 "selected"
             );
+
         });
 
     element.classList.add("selected");
@@ -3111,21 +2386,15 @@ function selectItem(
     sendChoice(type + ": " + item);
 
     if(type==="food"){
-
         reduceAnger(18);
-
     }
 
     if(type==="drink"){
-
         reduceAnger(10);
-
     }
 
     if(type==="dessert"){
-
         reduceAnger(15);
-
     }
 
     toast(
@@ -3143,6 +2412,7 @@ function goNextAfterChoice(scene){
         );
 
         return;
+
     }
 
     if(state.scene===7 && !state.drink){
@@ -3152,6 +2422,7 @@ function goNextAfterChoice(scene){
         );
 
         return;
+
     }
 
     if(state.scene===8 && !state.dessert){
@@ -3161,6 +2432,7 @@ function goNextAfterChoice(scene){
         );
 
         return;
+
     }
 
     next(scene);
@@ -3239,27 +2511,42 @@ let quizIndex=0;
 const questions=[
 
     {
+
         q:"რომელი უფრო მოგეწონებოდა?",
+
         a:[
+
             "🌃 ველოსიპედით გასეირნება",
             "🎬 ფილმის ყურება"
+
         ]
+
     },
 
     {
+
         q:"რომელი უფრო გემრიელია?",
+
         a:[
+
             "🍫 Chocolate",
             "🍓 Strawberry"
+
         ]
+
     },
 
     {
+
         q:"ახლა როგორი ხასიათი გაქვს?",
+
         a:[
+
             "😒 ცოტა გაბრაზებული",
             "❤️ უკვე კარგად"
+
         ]
+
     }
 
 ];
@@ -3298,16 +2585,21 @@ function answerQuiz(element){
     document
         .querySelectorAll(".answer")
         .forEach(answer=>{
+
             answer.classList.remove(
                 "selected"
             );
+
         });
 
     element.classList.add(
         "selected"
     );
 
-    sendChoice("quiz: " + element.textContent.trim());
+    sendChoice(
+        "quiz: " +
+        element.textContent.trim()
+    );
 
     reduceAnger(5);
 
@@ -3517,12 +2809,14 @@ function happyFinal(){
 function createConfetti(){
 
     const symbols=[
+
         "❤️",
         "💗",
         "✨",
         "💕",
         "🌸",
         "⭐"
+
     ];
 
     for(
@@ -3592,7 +2886,6 @@ function celebrate(){
 }
 
 updateAnger();
-
 renderQuiz();
 
 </script>
